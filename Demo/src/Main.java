@@ -1,20 +1,25 @@
 class A{
-    public void welcome(){
-        System.out.println("Welcome to Java Course");
+    public int add(int a,int b){
+        return a+b;
     }
         }
 
 class B extends A{
-    public void welcome(){
-        System.out.println("Welcome to Java and springboot Course");
+    public int add(int a,int b,int c){
+        return a+b+c;
+    }
+}
+class C extends B{
+    public int add(int a,int b,int c,int d){
+        return a+b+c+d;
     }
 }
 
 public class Main {
     public static void main(String[] args) {
 
-        A obj = new B();
-        obj.welcome();
+        C obj = new C();
+        System.out.println(obj.add(5,6,5));
     }
 }
 
